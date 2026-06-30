@@ -82,7 +82,11 @@ func flags() []cli.Flag {
 		&cli.BoolFlag{Name: flagCount, Aliases: []string{"c"}, Usage: "print only a count of matching lines"},
 		&cli.BoolFlag{Name: flagWord, Aliases: []string{"w"}, Usage: "match only whole words"},
 		&cli.BoolFlag{Name: flagLine, Aliases: []string{"x"}, Usage: "match only whole lines"},
-		&cli.BoolFlag{Name: flagExtended, Aliases: []string{"E"}, Usage: "interpret PATTERN as an extended regular expression"},
+		&cli.BoolFlag{
+			Name:    flagExtended,
+			Aliases: []string{"E"},
+			Usage:   "interpret PATTERN as an extended regular expression",
+		},
 	}
 }
 
